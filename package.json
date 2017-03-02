@@ -1,5 +1,5 @@
 {
-  "name": "postcss-react-native",
+  "name": "@loggi/postcss-react-native",
   "version": "1.0.1",
   "description": "PostCSS plugin to create react stylesheets",
   "keywords": [
