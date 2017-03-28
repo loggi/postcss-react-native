@@ -95,7 +95,6 @@ const pdecl = (root, type, values) => {
 };
 
 const writeRule = ({css, expressions = []}) => {
-
     const src = Object.keys(css).map((key)=> {
 
         const decls = css[key];
@@ -134,8 +133,12 @@ const writeExpressions = ({expressions, inverse})=> {
 
 const writeSheet = (cssStr, expressions = []) => {
     if (expressions.length) {
+        const conditionals = expressions.map(writeExpressions).filter(c => c !== '');
+        if (conditionals.length === 0) {
+            return '';
+        }
         return `
-          if (${expressions.map(writeExpressions).join(' || ')}){\n${cssStr}\n}
+          if (${conditionals.join(' || ')}){\n${cssStr}\n}
           `;
     } else {
         return `
