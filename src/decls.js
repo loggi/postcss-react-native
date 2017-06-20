@@ -93,10 +93,10 @@ export const HANDLERS = Object.assign({}, DECLS, {
             case 'wrap':
                 return enumer('wrap',
                     'nowrap')(postfix, value);
+            case 'basis':
+                return postfixWrap(postfix, value.replace('%', '%%'));
             case 'grow':
             case 'shrink':
-            case 'basis':
-
         }
         return {
             ['']: value

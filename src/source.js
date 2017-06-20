@@ -18,6 +18,8 @@ const rhsunit = (u)=> {
     if (un && typeof un.value === 'number') {
         if (un.unit == 'deg') {
             ret = `'${un.value} deg'`
+        } else if (un.unit === '%%') {
+            ret = `'${un.value}%'`;
         } else {
             ret = un.unit ? `(${un.value} * units["${un.unit}"])` : un.value;
         }
