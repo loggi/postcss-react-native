@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {PropTypes} from 'prop-types';
+import PropTypes from 'prop-types';
 import {View, Dimensions, PixelRatio, Platform} from 'react-native';
 import {calculate, asArray, splitClass, splitComma, toggle, WINDOW, window} from './componentHelpers';
 import listen from './listen';
