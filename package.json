@@ -44,5 +44,9 @@
     "fb-watchman": "^1.9.0",
     "lodash": "^3.10.1",
     "mocha": "^2.2.5"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "prop-types": "*"
   }
 }
